@@ -1,14 +1,14 @@
 let total = 0;
 
 function clickCard(target) {
-    const selectItem = document.getElementById('select-item');
+    const ul = document.getElementById('select-item');
     const itemTextShow = target.childNodes[5].innerText;
-    const li = document.createElement('li', '$')
+    const li = document.createElement('li' )
     li.innerText = itemTextShow;
-    selectItem.appendChild(li)
+    ul.appendChild(li)
     const price = target.childNodes[7].childNodes[1].innerText;
     total = parseInt(total) + parseInt(price);
-    document.getElementById('avarage-total-price').innerText = total;
+    document.getElementById('average-total-price').innerText = total;
 
 
 }
@@ -49,6 +49,9 @@ function discountBtn() {
         btnDisable.disabled = true;
     }
 
+}
+function goToHome(){
+    document.getElementById('clear-all').reset();
 }
 // const discountAmountField = total * 0.2;
 //          total -= discountAmountField;

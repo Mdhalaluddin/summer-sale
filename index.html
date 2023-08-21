@@ -213,7 +213,7 @@
                                 <h2 class="font-medium">Single Relax Chair</h2>
                             </div>
                             <div class="items-center text-center mt-0">
-                                    <span>185</span><span>.00TK</span>
+                                <span>185</span><span>.00TK</span>
                             </div>
                         </div>
                         <!-------------- second card ------------>
@@ -262,29 +262,42 @@
         <section class="lg:w-1/4 mt-32 bg-coverBg-simpleBg rounded-lg mb-14">
             <div class="ml-10 mt-8 mb-8">
                 <h3 class="font-medium text-base">Have coupon?</h3>
-                <input id="input-discount" class="border-solid border-2 border-black mt-4 w-34 " type="" placeholder="Coupon code">
-                <button disabled id="btn-apply"
-                  onclick="discountBtn()"  class="btn btn-primary text-base font-semibold -ml-8 btn btn-sm bg-coverBg-btnColor border-none">Apply</button>
+                <input id="input-discount" class="border-solid border-2 border-black mt-4 w-34 " type=""
+                    placeholder="Coupon code">
+                <button id="btn-apply" onclick="discountBtn()"
+                    class="btn btn-primary text-base font-semibold -ml-6 btn btn-sm bg-coverBg-btnColor border-none">Apply</button>
             </div>
             <hr>
             <!------------------ total price section--------------------->
-            <div class="select-item ml-10 mt-8 mb-8" id="select-item">
-            </div>
-            <div class="ml-10 mt-8 mb-8 ">
-                <h2 class="w-6 font-medium w-9/12 mt-4">Total Price: <span id="avarage-total-price">0</span></h2>
-                <h2 class="w-6 font-medium w-9/12 mt-4">Discount: <span id="discount-field">0</span> </h2>
-                <h2 class="w-6 font-medium w-9/12 mt-4">Total: <span id="avg-total"></span> </h2>
-            </div>
-            <hr class="mt-8">
-            <div class="ml-10 items-center mt-8 mb-8 ">
-                <button disabled
-                  id="btn-disable"  class="btn btn-primary  w-4/5 text-base font-semibold  btn btn-sm bg-coverBg-btnColor border-none">Apply</button>
-            </div>
-            <div>
-
-            </div>
+            <form id="clear-all">
+                <div class="select-item ml-10 mt-8 mb-8" id="select-item">
+                </div>
+                <div class="ml-10 mt-8 mb-8 ">
+                    <h2 class="w-6 font-medium w-9/12 mt-4">Total Price: <span id="average-total-price">0</span></h2>
+                    <h2 class="w-6 font-medium w-9/12 mt-4">Discount: <span id="discount-field">0</span> </h2>
+                    <h2 class="w-6 font-medium w-9/12 mt-4">Total: <span id="avg-total"></span> </h2>
+                </div>
+            </form>
+                <hr class="mt-8">
+                <div class="ml-10 items-center mt-8 mb-8 ">
+                    <button id="btn-disable" class="btn w-4/5 bg-coverBg-btnColor text-base font-semibold text-white"
+                        onclick="my_modal_5.showModal()">Make Purchase</button>
+                    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle  ">
+                        <form method="dialog" class="modal-box">
+                            <div class="items-center ml-20 px-16">
+                                <img src="images/congo.png" alt="">
+                            </div>
+                            <h3 class="font-bold text-center text-lg mt-8">Congratulations</h3>
+                            <p class=" text-center ">Your Purchase the product</p>
+                            <div class="modal-action items-center justify-center">
+                                <button onclick="goToHome()" class="btn bg-coverBg-btnColor text-base font-semibold text-white text-center">go
+                                    Home</button>
+                            </div>
+                        </form>
+                    </dialog>
+                </div>
+            
         </section>
-
     </nav>
 
     <script src="js/summer.js"></script>
