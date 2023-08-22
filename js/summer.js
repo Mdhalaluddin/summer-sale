@@ -3,24 +3,27 @@ let total = 0;
 function clickCard(target) {
     const ul = document.getElementById('select-item');
     const itemTextShow = target.childNodes[5].innerText;
-    const li = document.createElement('li' )
+    const li = document.createElement('li')
     li.innerText = itemTextShow;
     ul.appendChild(li)
+
     const price = target.childNodes[7].childNodes[1].innerText;
     total = parseInt(total) + parseInt(price);
     document.getElementById('average-total-price').innerText = total;
-
-
-}
-
-function discountBtn() {
     const button = document.getElementById('btn-apply');
-    if (total => 0) {
+    if (total > 200) {
         button.disabled = false;
     }
     else {
         button.disabled = true;
     }
+
+}
+function addTextProductName() {
+    console.log('added product')
+}
+
+function discountBtn() {
 
     const discountInput = document.getElementById('input-discount');
     const discountInputField = discountInput.value;
@@ -42,7 +45,7 @@ function discountBtn() {
     totalAvg = total - discountAmount;
     document.getElementById('avg-total').innerText = totalAvg;
     const btnDisable = document.getElementById('btn-disable')
-    if (totalAvg > 200) {
+    if (totalAvg > 0) {
         btnDisable.disabled = false;
     }
     else {
@@ -50,14 +53,8 @@ function discountBtn() {
     }
 
 }
-function goToHome(){
+function goToHome() {
     document.getElementById('clear-all').reset();
 }
-// const discountAmountField = total * 0.2;
-//          total -= discountAmountField;
-//         discountPrice.innerText = total;
 
-
- // discount = total / avg;
-    // document.getElementById('discount-field').innerText = discount;
 

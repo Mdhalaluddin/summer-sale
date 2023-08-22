@@ -61,12 +61,12 @@
         </div>
     </section>
     <!---------------------Kitchenware section--->
-    <nav class="lg:flex mt-14 bg-coverBg-background">
-        <main class="w-3/4">
+    <nav class="lg:flex md:flex mt-14 bg-coverBg-background">
+        <main class="lg:w-3/4">
             <section class="max-w-screen-xl contener  mx-auto mt-14 mb-14">
                 <div class="mx-20">
                     <p class="font-medium text-4xl">Kitchenware</p>
-                    <nav class="lg:flex lg:flex-row lg:gap-4 ">
+                    <nav class="lg:flex lg:flex-row lg:gap-4">
                         <!-------------- first card ------------>
                         <div onclick="clickCard(this)" class="card lg:w-9/12 bg-base-100 shadow-xl mt-8 w-60 ">
                             <figure class="m-8 px-10 py-10 bg-coverBg-cardBg rounded-xl">
@@ -147,7 +147,7 @@
                             <div class=" items-center text-center p-2 h-10">
                                 <h2 class="font-medium">Sports Back Cap</h2>
                             </div>
-                            <div class="items-center text-center mt-0">
+                            <div class="items-center text-center mb-8">
                                 <span>49</span><span>.00TK</span>
                             </div>
                         </div>
@@ -166,7 +166,7 @@
                             <div class=" items-center text-center p-2 h-10">
                                 <h2 class="font-medium">Full Jersey Set</h2>
                             </div>
-                            <div class="items-center text-center mt-0">
+                            <div class="items-center text-center mb-8">
                                 <span>69</span><span>.00TK</span>
                             </div>
                         </div>
@@ -185,9 +185,10 @@
                             <div class=" items-center text-center p-2 h-10">
                                 <h2 class="font-medium">Sports cates</h2>
                             </div>
-                            <div class="items-center text-center mt-0">
+                            <div class="items-center text-center mb-8">
                                 <span>159</span><span>.00TK</span>
                             </div>
+                            
                         </div>
                     </nav>
                 </div>
@@ -212,7 +213,7 @@
                             <div class=" items-center text-center p-2 h-10">
                                 <h2 class="font-medium">Single Relax Chair</h2>
                             </div>
-                            <div class="items-center text-center mt-0">
+                            <div class="items-center text-center Mb-8">
                                 <span>185</span><span>.00TK</span>
                             </div>
                         </div>
@@ -231,7 +232,7 @@
                             <div class=" items-center text-center p-2 h-10">
                                 <h2 class="font-medium">Children play</h2>
                             </div>
-                            <div class="items-center text-center mt-0">
+                            <div class="items-center text-center mb-8">
                                 <span>299</span><span>.00TK</span>
                             </div>
                         </div>
@@ -250,7 +251,7 @@
                             <div class=" items-center text-center p-2 h-10">
                                 <h2 class="font-medium">Flexible Sofa</h2>
                             </div>
-                            <div class="items-center text-center mt-0">
+                            <div class="items-center text-center mb-8">
                                 <span id="total">399</span><span>.00TK</span>
                             </div>
                         </div>
@@ -262,10 +263,10 @@
         <section class="lg:w-1/4 mt-32 bg-coverBg-simpleBg rounded-lg mb-14">
             <div class="ml-10 mt-8 mb-8">
                 <h3 class="font-medium text-base">Have coupon?</h3>
-                <input id="input-discount" class="border-solid border-2 border-black mt-4 w-34 " type=""
+                <input id="input-discount" class="border-solid border-2 border-black mt-4 w-32 " type=""
                     placeholder="Coupon code">
-                <button id="btn-apply" onclick="discountBtn()"
-                    class="btn btn-primary text-base font-semibold -ml-6 btn btn-sm bg-coverBg-btnColor border-none">Apply</button>
+                <button disabled id="btn-apply" onclick="discountBtn()"
+                    class="btn btn-primary text-base font-semibold -ml-4 btn btn-sm bg-coverBg-btnColor border-none">Apply</button>
             </div>
             <hr>
             <!------------------ total price section--------------------->
@@ -273,18 +274,18 @@
                 <div class="select-item ml-10 mt-8 mb-8" id="select-item">
                 </div>
                 <div class="ml-10 mt-8 mb-8 ">
-                    <h2 class="w-6 font-medium w-9/12 mt-4">Total Price: <span id="average-total-price">0</span></h2>
-                    <h2 class="w-6 font-medium w-9/12 mt-4">Discount: <span id="discount-field">0</span> </h2>
-                    <h2 class="w-6 font-medium w-9/12 mt-4">Total: <span id="avg-total"></span> </h2>
+                    <h2 class="w-6 font-medium w-9/12 mt-4">Total Price : <span id="average-total-price"> </span>TK</h2>
+                    <h2 class="w-6 font-medium w-9/12 mt-4">Discount : <span id="discount-field"> </span>TK </h2>
+                    <h2 class="w-6 font-medium w-9/12 mt-4">Total : <span id="avg-total"> </span>TK </h2>
                 </div>
             </form>
                 <hr class="mt-8">
                 <div class="ml-10 items-center mt-8 mb-8 ">
-                    <button id="btn-disable" class="btn w-4/5 bg-coverBg-btnColor text-base font-semibold text-white"
+                    <button disabled id="btn-disable" class="btn w-4/5 bg-coverBg-btnColor text-base font-semibold text-white"
                         onclick="my_modal_5.showModal()">Make Purchase</button>
-                    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle  ">
+                    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle w-4/5 ">
                         <form method="dialog" class="modal-box">
-                            <div class="items-center ml-20 px-16">
+                            <div class="items-center lg:ml-20 md:ml-16 px-16 ">
                                 <img src="images/congo.png" alt="">
                             </div>
                             <h3 class="font-bold text-center text-lg mt-8">Congratulations</h3>
